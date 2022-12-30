@@ -3,24 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import singleSpaReact from 'single-spa-react'
-import { registerApplication, start } from 'single-spa'
+// import { registerApplication, start } from 'single-spa'
 
-const app = singleSpaReact({
+window.reactApp = singleSpaReact({
   React,
   ReactDOM,
   rootComponent: App,
-  domElementGetter(){
-    return document.getElementById('root')
-  }
+  // domElementGetter(){
+  //   return document.getElementById('root')
+  // }
 })
 
-registerApplication({
-  name: 'react-app',
-  app,
-  activeWhen: ['/'],
-  customProps: {
-    testProps: 'This is props'
-  }
-})
+// registerApplication({
+//   name: 'react-app',
+//   app,
+//   activeWhen: ['/'],
+//   customProps: {
+//     testProps: 'This is props'
+//   }
+// })
 
-start()
+// start()
